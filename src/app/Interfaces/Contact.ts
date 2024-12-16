@@ -1,46 +1,55 @@
+import { FormAddress } from "./Form";
+
 export interface ContactResponse {
   success: boolean;
   data: ContactData;
 }
-
-export interface ContactData {
+export interface Contact {
+  author: {
+    id: number;
+    detail: string;
+    type: number;
+    user_id: number;
+    user_uid: number;
+  };
+  company_id: number | null;
+  jobtitle_id: number | null;
+  lead_scoring: number;
+  gender: number;
+  birth_date: string | null;
   emails: string[];
   phones: string[];
-  site: string;
-  origin: number;
-  birth_date: string;
-  customer_date: string;
-  life_cycle: number;
-  gender: number;
-  lead_scoring: number;
-  source_id: number;
-  source: Entity;
-  jobtitle_id: number;
-  jobtitle: Entity;
-  parent_id: number;
-  parent: PersonDetails;
-  responsible_id: number;
-  responsible: PersonDetails;
+  site: string | null;
+  url: string | null;
+  source_id: number | null;
+  parent_id: number | null;
+  responsible_id: number | null;
   author_id: number;
-  author: AuthorDetails;
+  life_cycle: number;
+  origin: number;
+  customer_date: string | null;
   creation_date: string;
   update_date: string;
-  addresses: Address[];
-  groups: Group[];
-  tags: Tag[];
-  companies: Company[];
-  company_id: number;
-  company: Company;
   id: number;
+  address: FormAddress | null;
+  addresses: object[] | null;
+  groups: object[] | null;
+  tags: object[] | null;
   name: string;
   full_name: string;
-  email: string;
-  phone: string;
-  document: string;
+  email: string | null;
+  phone: string | null;
+  document: string | null;
   image: string;
   image_min: string;
   show_name: string;
-  custom_exemple: string;
+}
+
+export interface ContactData extends Contact {
+  total: number;
+  page_index: number;
+  page_size: number;
+  results: Contact[];
 }
 
 export interface Entity {

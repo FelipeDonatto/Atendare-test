@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         source: "/api/contacts",
         destination: "https://api.atendare.com/v2/contacts",
       },
+      {
+        source: "/api/contacts/:id",
+        destination: "https://api.atendare.com/v2/contacts/:id",
+      },
     ];
   },
 };

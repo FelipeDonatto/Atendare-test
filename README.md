@@ -1,37 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Documentação da Aplicação**
 
-## Getting Started
+## **Introdução**
 
-First, run the development server:
+## Esta aplicação é um sistema de gerenciamento de contatos, desenvolvido em React e TypeScript. Ela permite que os usuários criem, editem e excluam contatos, além de realizar buscas e filtragens.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ![fluxo](/public/site-usage.gif)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Funcionalidades**
 
-## Learn More
+- **Criar Contato**: permite que os usuários criem novos contatos, fornecendo informações como nome, e-mail, telefone, etc.
+- **Editar Contato**: permite que os usuários editem contatos existentes, alterando informações como nome, e-mail, telefone, etc.
+- **Excluir Contato**: permite que os usuários excluam contatos existentes.
+- **Buscar Contato**: permite que os usuários realizem buscas por contatos, utilizando filtros como nome, e-mail, telefone, etc.
+- **Filtrar Contato**: permite que os usuários filtrem contatos, utilizando critérios como nome, e-mail, telefone, etc.
 
-To learn more about Next.js, take a look at the following resources:
+## **Componentes**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Formulário de Contato**: componente responsável por criar e editar contatos.
+- **Lista de Contatos**: componente responsável por exibir a lista de contatos.
+- **Barra de Busca**: componente responsável por realizar buscas por contatos.
+- **Filtro de Contatos**: componente responsável por filtrar contatos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Tecnologias Utilizadas**
 
-## Deploy on Vercel
+- **React**: biblioteca JavaScript para criar interfaces de usuário.
+- **NextJS**: utilizado em conjunto com o react.
+- **TypeScript**: linguagem de programação para criar aplicações escaláveis e seguras.
+- **Formik**: biblioteca para agilizar a criação e controle de formulários.
+- **Yup**: biblioteca para validação de formulários.
+- **TailwindCSS**: biblioteca para simplificar a construção das páginas fornecendo CSS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Instalação**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Atendare-test
+1. Clone o repositório da aplicação.
+2. Instale as dependências utilizando o comando `npm install`.
+3. Inicie a aplicação utilizando o comando `npm run dev`.
+
+## **Configuração**
+
+- **Arquivo de Configuração**: o arquivo `.env` precisará ser criado e populado por uma chave `NEXT_PUBLIC_API_TOKEN`
+- **Variáveis de Ambiente**: as variáveis de ambiente são utilizadas para armazenar as configurações da aplicação.
+
+## **Segurança**
+
+- **Validação de Formulários**: a aplicação utiliza validação de formulários para garantir que os dados sejam válidos e seguros.
+
+## **Desenvolvimento**
+
+- **Atualizações**: a aplicação poderia ser melhorada com:
+  - Design responsivo para dispositivos móveis
+    - Devido ao tempo não foi possível deixar completamente responsivo.
+  - Rotas e verificações de login
+  - Testes unitários
+  - Existe um erro ao usar o Formik e campos numéricos em formulários.
